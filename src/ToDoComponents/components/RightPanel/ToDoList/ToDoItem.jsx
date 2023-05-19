@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { IoIosCloseCircleOutline } from 'react-icons/io';
-import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
+import { IoIosCloseCircleOutline } from 'react-icons/all';
+import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/all';
 
 export function ToDoItem({ data, openDeleteTaskModal, checkElement }) {
   const getCheckBox = () => {
