@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoIosSearch } from 'react-icons/all';
+import { IoIosSearch } from 'react-icons/io';
 
 export function ToDoSearcher({ searchValue, setSearchValue }) {
   const [searchButton, setSearchButton] = React.useState(false);
