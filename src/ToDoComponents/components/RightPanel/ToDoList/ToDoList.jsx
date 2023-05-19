@@ -43,6 +43,7 @@ export function ToDoList({ searchValue, hours, children, filteredList, selectedI
           <span className="todo__tasks-title">Your Task</span>
           {hours.map((item, index) => {
             if (!comprobeData(item.hour, filteredList).completed && comprobeData(item.hour, filteredList).hour) return children(item, index);
+            return <></>;
           })}
           {hasTasks()}
         </div>
@@ -51,6 +52,7 @@ export function ToDoList({ searchValue, hours, children, filteredList, selectedI
           <span className="todo__tasks-title">Completed Task</span>
           {hours.map((item, index) => {
             if (comprobeData(item.hour, filteredList).completed && comprobeData(item.hour, filteredList).hour) return children(item, index);
+            return <></>;
           })}
           {hasCompletedTasks()}
         </div>
