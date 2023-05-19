@@ -9,7 +9,7 @@ export const useToDo = ({ searchValue, selectedToDoDay }) => {
 
   React.useEffect(() => {
     const selectedIndex = getSelectedIndex(toDoSaved, selectedToDoDay || new Date());
-    const selected = toDoSaved[selectedIndex].data;
+    const selected = toDoSaved[selectedIndex]?.data || [];
     let searched = [];
     if (searchValue) {
       searched =
@@ -21,7 +21,7 @@ export const useToDo = ({ searchValue, selectedToDoDay }) => {
     }
 
     const tempArray = [...toDoSaved];
-    tempArray[selectedIndex] = { date: toDoSaved[selectedIndex].date, data: searched };
+    tempArray[selectedIndex] = { date: toDoSaved[selectedIndex]?.date, data: searched };
 
     setFilteredList(tempArray);
   }, [toDoSaved, searchValue, selectedToDoDay]);
